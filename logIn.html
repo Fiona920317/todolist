@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/logIn.css" />
+    <title>TodoList API作業 登入</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="container logIn-container">
+        <img
+          class="d-none d-md-inline img-fluid"
+          src="image/left.png"
+          alt="online todo list image"
+        />
+        <img
+          class="d-md-none img-fluid mb-3"
+          src="image/logo_lg.png"
+          alt="todo list logo"
+        />
+        <div class="logInForm ms-md-3 ms-lg-5">
+          <h2 class="logInForm__title">最實用的線上代辦事項服務</h2>
+          <form class="logInForm__body needs-validation" novalidate>
+            <div class="logInForm__body__inputGroup">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="email"
+                placeholder="請輸入email"
+                required
+              />
+              <div class="invalid-tooltip">請輸入有效的email</div>
+            </div>
+            <div class="logInForm__body__inputGroup">
+              <label for="password" class="form-label">密碼</label>
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                id="password"
+                placeholder="請輸入密碼"
+                autocomplete="off"
+                required
+              />
+              <div class="invalid-tooltip">密碼至少需6個字元</div>
+            </div>
+
+            <div class="logInForm__body__buttonGroup">
+              <input
+                class="btn btn-dark"
+                id="submitBtn"
+                type="submit"
+                value="登入"
+              />
+              <a class="btn btn-primary" href="index.html">註冊帳號</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/logIn.js"></script>
+  </body>
+</html>

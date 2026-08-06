@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.background {
+  background-color: #ffd370;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.logIn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 767px) {
+  .logIn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.logInForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  width: 100%;
+}
+.logInForm__title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.logInForm__body {
+  display: flex;
+  flex-direction: column;
+}
+.logInForm__body__inputGroup {
+  margin-bottom: 20px;
+  position: relative;
+}
+.logInForm__body__inputGroup label {
+  font-weight: bold;
+  margin: 0;
+}
+.logInForm__body__inputGroup input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.logInForm__body__buttonGroup {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  gap: 10px;
+}
+.logInForm__body__buttonGroup .btn {
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.btn-primary {
+  background-color: #ffd370;
+  border: #ffd370;
+  color: black;
+}
+.btn-primary:hover {
+  color: white;
+  background-color: #ffd370;
+}

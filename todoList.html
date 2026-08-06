@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/todoList.css" />
+    <title>TodoList API作業 Todo List</title>
+  </head>
+  <body>
+    <div class="background">
+      <header class="navbar container">
+        <img class="navbar-brand" src="image/logo_lg.png" alt="logo" />
+        <ul class="navbar-nav">
+          <li class="nav-item d-none d-md-block">王小明的代辦</li>
+          <li class="nav-item"><a class="nav-link logOutBtn">登出</a></li>
+        </ul>
+      </header>
+      <div class="popupMessage d-none">
+        <div class="popupMessage__message translate-middle">
+          <div class="popupMessage__message__content"></div>
+          <div class="popupMessage__message__buttonGroup">
+            <a class="confirmBtn btn btn-primary">確認</a>
+            <a class="cancelBtn btn btn-secondary">取消</a>
+          </div>
+        </div>
+      </div>
+      <div class="container todoList-container">
+        <form class="addTodoGroup needs-validation" novalidate>
+          <input
+            type="text"
+            class="addTodoGroup__input"
+            id="addTodoGroup__input"
+            placeholder="新增代辦事項"
+            autocomplete="off"
+          />
+          <button
+            type="submit"
+            class="addTodoGroup__submit translate-middle"
+            style="border: none; background-color: transparent"
+          >
+            <i class="bi bi-plus-square-fill"></i>
+          </button>
+        </form>
+        <div class="emptyTodoGroup">
+          <p class="fw-bold">目前尚無代辦事項</p>
+          <img
+            src="image/empty 1.png"
+            alt="empty image"
+            style="max-width: 240px"
+          />
+        </div>
+        <div class="showTodoGroup d-none">
+          <div class="showTodoGroup__switchState">
+            <p class="showTodoGroup__switchState__item showAll active">全部</p>
+            <p class="showTodoGroup__switchState__item showUncompleted">
+              待完成
+            </p>
+            <p class="showTodoGroup__switchState__item showCompleted">已完成</p>
+          </div>
+          <ul class="showTodoGroup__main"></ul>
+          <div class="showTodoGroup__main__moreFunction">
+            <a class="showMoreBtn"></a>
+            <a class="clearCompletedBtn">清除已完成項目</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.js"
+      integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/todolist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/signUp.css" />
+    <title>TodoList API作業 註冊</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="container signUp-container">
+        <img
+          class="d-none d-md-inline img-fluid"
+          src="image/left.png"
+          alt="online todo list image"
+        />
+        <img
+          class="d-md-none img-fluid mb-3"
+          src="image/logo_lg.png"
+          alt="todo list logo"
+        />
+        <div class="signUpForm ms-md-3 ms-lg-5">
+          <h2 class="signUpForm__title">註冊帳號</h2>
+          <form class="signUpForm__body needs-validation" novalidate>
+            <div class="signUpForm__body__inputGroup">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="email"
+                placeholder="請輸入email"
+                required
+              />
+              <div class="invalid-tooltip">請輸入有效的email</div>
+              <div class="invalid-tooltip d-none" id="email-used">
+                Email已被使用
+              </div>
+            </div>
+            <div class="signUpForm__body__inputGroup">
+              <label for="nickname" class="form-label">暱稱</label>
+              <input
+                type="text"
+                name="nickname"
+                class="form-control"
+                id="nickname"
+                placeholder="請輸入暱稱"
+                autocomplete="off"
+                required
+              />
+              <div class="invalid-tooltip">請輸入暱稱</div>
+            </div>
+            <div class="signUpForm__body__inputGroup">
+              <label for="password" class="form-label">密碼</label>
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                id="password"
+                placeholder="請輸入密碼"
+                autocomplete="off"
+                required
+              />
+              <div class="invalid-tooltip">密碼至少需6個字元</div>
+            </div>
+            <div class="signUpForm__body__inputGroup">
+              <label for="password2" class="form-label">請再次輸入密碼</label>
+              <input
+                type="password"
+                name="password2"
+                class="form-control"
+                id="password2"
+                placeholder="請再次輸入密碼"
+                autocomplete="off"
+                required
+              />
+              <div class="invalid-tooltip">密碼不一致</div>
+            </div>
+
+            <div class="signUpForm__body__buttonGroup">
+              <input
+                class="btn btn-dark"
+                id="submitBtn"
+                type="submit"
+                value="註冊帳號"
+              />
+              <a class="btn btn-primary" href="logIn.html">登入</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/signUp.js"></script>
+  </body>
+</html>
