@@ -38,11 +38,12 @@
         <form class="addTodoGroup needs-validation" novalidate>
           <input
             type="text"
-            class="addTodoGroup__input"
-            id="addTodoGroup__input"
+            class="addTodoGroup__input form-control"
             placeholder="新增代辦事項"
             autocomplete="off"
+            required
           />
+          <div class="invalid-tooltip">請填寫代辦事項</div>
           <button
             type="submit"
             class="addTodoGroup__submit translate-middle"

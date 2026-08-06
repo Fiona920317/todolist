@@ -156,6 +156,7 @@ function addTodo(input_value) {
     })
     .catch((err) => console.log(err.response));
 }
+
 async function editTodo(input_value, selectedIdid) {
   axios
     .put(
@@ -276,18 +277,40 @@ $(document).ready(async function () {
   });
 
   //新增todos並即時更新todo和showMoreBtn
-  $(".addTodoGroup").on("submit", (e) => {
-    e.preventDefault();
-    const input = $(".addTodoGroup__input");
 
-    if (input.val() == "") {
-      alert("請輸入代辦事項");
-      return;
-    } else {
-      addTodo(input.val());
-      input.val("");
-    }
-  });
+  (function () {
+    "use strict";
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll(".needs-validation");
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          event.preventDefault();
+
+          const input = $(".addTodoGroup__input");
+          const isValid = form.checkValidity();
+          form.classList.add("was-validated");
+
+          if (!isValid) {
+            //如果表單驗證為false
+            event.stopPropagation();
+            return;
+          } else {
+            //如果表單驗證為true
+            addTodo(input.val());
+            input.val("");
+          }
+
+          form.classList.remove("was-validated"); //  重置驗證狀態
+        },
+        false,
+      );
+    });
+  })();
 
   //編輯todos並即時更新todo，需要選取對應input的ID
   $(".showTodoGroup__main").on("change", ".todo", function (e) {
